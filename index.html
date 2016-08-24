@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="{{ meta.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Ottawa choirs, Ottawa choir,Christmas,Christmas carols,renaissance,madrigals,choral,vocal,ensemble,carols,carollers,carolers, Christmas music,music,Ottawa,a cappella,acappella, CD,chamber choir,Ottawa choral,Chistmas lyrics,song lyrics{% if meta.keywords %}, {{ meta.keywords }}{% endif %}">
+
+<title>{% if meta.title %}{{ meta.title }} | {% endif %} {{ site_title }}</title>
+{% if meta.description %}
+	<meta name="description" content="{{ meta.description }}"> 
+{% endif %}{% if meta.robots %}
+	<meta name="robots" content="{{ meta.robots }}">
+{% endif %}
+{% for page in page_languages %}{% if page.language != meta.language %}
+	<link rel="alternate" hreflang="{{ page.language }}" href="{{ page.url }}" />
+{% endif %}{% endfor %}
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <!-- Custom CSS -->
+    <link href="{{ theme_url}}/assets/css/MyFontsWebfontsKit.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <link href="{{ theme_url}}/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ theme_url}}/assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<header id="header">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid"> 
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">View Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				  {% if meta.language == 'fr' %}
+					<a class="navbar-brand" href="{{ base_url }}/accueil">Les Chanteurs Stairwell</a>
+				  {% else %}
+				    <a class="navbar-brand" href="{{ base_url }}">The Stairwell Carollers</a>
+				  {% endif %}
+				</div>
+				<div class="collapse navbar-collapse pull-right">
+					  <nav> 
+					<ul class="nav navbar-nav">
+					{% for page in pages %}
+					<li><a href="{{ page.url }}">{{ page.title }}</a></li> 
+					{% endfor %}
+        {% for category in categories %}
+        <li class="dropdown">
+          <a href="{{ category.pages[1].url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ category.title }} <span class="caret"></span></a>
+          {% if category.pages|length > 0 %}
+          <ul class="dropdown-menu">
+          {% for page in category.pages %}
+            <li><a href="{{ page.url }}">{{ page.title }} </a></li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+		{% endfor %}
+		{% for page in page_languages %}
+		{% if page.language != meta.language %}
+		<li><a href="{{ page.url }}">
+		{% if page.language == 'fr' %}Français{% else %}English{% endif %}
+		</a></li>
+		{% endif %}
+		{% endfor %}
+	  </ul>
+	  </nav>
+	</div><!--/.nav-collapse -->
+	</div>
+	</div> 
+	</header>
+
+	<div class="container">
+		<section id="content">
+			{{ content }}
+		</section>
+	</div><!-- /.container -->
+	<footer id="footer" class="footer">
+	<div class="navbar navbar-inverse navbar-fixed-bottom">
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-xs-6">
+	  <ul class="nav navbar-nav"><li>
+	  {% if meta.language == 'fr' %}
+	  <a href="{{ base_url }}/colophon-fr" >&copy; Les Chanteurs Stairwell</a> 
+	  {% else %}
+	  <a href="{{ base_url }}/colophon" >&copy; Stairwell Carollers</a> 
+		{% endif %}
+		</li></ul>
+		</div>
+	  <div class="col-xs-6 collapse navbar-collapse pull-right">
+	<ul class="navbar dropup icons">
+     <li><a href="https://twitter.com/StairwellChoir" class="fa-twitter fa-sm"> twitter </a></li> 
+     <li><a href="http://www.youtube.com/user/StairwellCarollers" class="fa-youtube fa-sm"> youtube </a></li> 
+     <li><a href="https://www.facebook.com/TheStairwellCarollers" class="fa-facebook fa-sm"> facebook </a></li> 
+     <li><a href="http://www.stairwellcarollers.blogspot.com/" class="jv-blogger fa-sm" > blogspot </a></li>
+     <li><a href="http://www.pinterest.com/stairwellcarol/" class="fa-pinterest fa-sm"> pinterest</a></li>
+     <li><a href="mailto:info@stairwellcarollers.com" class="fa-envelope-o fa-sm"> email </a></li>
+	</ul>
+	</div>
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">View Navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	</div>
+	</div>
+	</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="{{ theme_url }}/assets/js/bootstrap.min.js"></script>
+	<script src="{{ theme_url }}/assets/js/carousel-extended.js"></script>
+
+</body>
+</html>
