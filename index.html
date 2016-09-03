@@ -18,7 +18,7 @@
 
 <meta name="Keywords" content="{{keywords}}{% if meta.keywords %}, {{ meta.keywords }}{% endif %}">
 
-<title>{% if meta.title %}{{ meta.title }} | {% endif %} {{ site_title }}</title>
+<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
 {% if meta.description %}
 	<meta name="description" content="{{ meta.description }}">
 {% endif %}{% if meta.robots %}
@@ -56,9 +56,9 @@
 					<span class="icon-bar"></span>
 					</button>
 				  {% if meta.language == 'fr' %}
-					<a class="navbar-brand" href="{{ base_url }}/accueil">Les Chanteurs Stairwell</a>
+					<a class="navbar-brand" href="{{ base_url }}/accueil">{{site_title}}</a>
 				  {% else %}
-				    <a class="navbar-brand" href="{{ base_url }}">The Stairwell Carollers</a>
+				    <a class="navbar-brand" href="{{ base_url }}">{{site_title}}</a>
 				  {% endif %}
 				</div>
 				<div class="collapse navbar-collapse pull-right">
@@ -94,7 +94,7 @@
 	</header>
 
 	<div class="container">
-		<section id="content">
+ 			<section id="content">
 			{{ content }}
 		</section>
 	</div><!-- /.container -->
@@ -112,7 +112,6 @@
 		</li></ul>
 		</div>
 	  <div class="col-xs-6 pull-right">
-{{config.social}}
 	<ul class="socialicons">
 		 {% for slug,item in social %}
 	<li><a href="{{ item.url }}" title="{{ item.title }}"><i class="icon-{{ slug }}"></i></a></li>
