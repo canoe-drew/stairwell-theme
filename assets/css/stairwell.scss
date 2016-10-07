@@ -1,0 +1,197 @@
+@import url(fontello-zocial.css);
+
+/*
+ * Colours
+ */
+
+$menu_brand: #fa0 * 1.2; 
+$menu_foreground: #ccc;
+$menu_background: #2952a3;
+$background: #eee;
+
+/*
+ * Fonts
+ */
+$fancy_font: 'UniversityRoman', 'Playfair Display', Times-Roman, serif;
+$normal_font: "Palatino", "Garamond", "Times Roman", serif;
+
+
+/*
+ * Common
+ */
+
+body {
+    padding-top: 55px;
+    background: $background;
+    font-family: $normal_font;
+    font-size: 1.85rem;
+}
+
+h1 {
+    font-family: $fancy_font;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 10px;
+}
+
+/* Screen Size Adjustments */
+@media screen and (max-width : 991px) {
+
+    .jumbotron h1 {
+        font-size: 45px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .jumbotron h1 {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/*
+ * Header 
+ */
+
+.navbar-inverse {
+    color: $menu_foreground;
+    background: $menu_background;
+}
+
+.navbar-inverse .navbar-brand {
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    color: $menu_brand;
+    font-family: $fancy_font;
+    font-weight: 600;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: $menu_brand * 1.4;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: $menu_foreground;
+    font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: fff; 
+}
+
+
+/* Header Screen Size Adjustments */
+@media screen and (max-width : 991px) {
+
+    .navbar-inverse .navbar-brand {
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        color: $menu_foreground !important;
+    }
+}
+
+/*
+ * Footer
+ */
+
+.footer .navbar-inverse {
+    margin-top: 40px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+.socialicons {
+    height: 50px;
+}
+
+.socialicons a {
+    display: inline-block;
+    color: $menu_foreground;
+    font-size: 28px;
+    line-height: 36px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+}
+
+.socialicons a:hover,
+.socialicons a:focus {
+    color: #fff;
+}
+
+/* Footer Screen Size Adjustments */
+@media screen and (max-width: 767px) {
+    .footer .col-xs-12 {
+        text-align: center;
+    }
+}
+
+/*
+ * CD pages
+ */
+.cd-cover-image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media screen and (max-width : 1199px) {
+    .cd-cover-image {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 991px) {
+    .cd-cover-image {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cd-cover-image {
+        width: 90%;
+    }
+}
+
+
