@@ -4,7 +4,7 @@
  * Colours
  */
 
-$menu_brand: #fa0 * 1.2; 
+$menu_brand: #fa0 * 1.2;
 $menu_foreground: #ccc;
 $menu_background: #2952a3;
 $background: #eee;
@@ -42,6 +42,12 @@ h1 {
     padding: 10px;
 }
 
+body img {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
 /* Screen Size Adjustments */
 @media screen and (max-width : 991px) {
 
@@ -55,7 +61,7 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-    
+
     .jumbotron h1 {
         font-size: 40px;
     }
@@ -64,11 +70,19 @@ h1 {
         font-size: 30px;
     }
 
+    body img {
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
 }
 
 
 /*
- * Header 
+ * Header
  */
 
 .navbar-inverse {
@@ -98,7 +112,7 @@ h1 {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: fff; 
+    color: fff;
 }
 
 
@@ -119,7 +133,7 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-    
+
     .navbar-collapse {
         width: 100%;
     }
@@ -193,5 +207,3 @@ h1 {
         width: 90%;
     }
 }
-
-
