@@ -48,6 +48,10 @@ body img {
     padding: 10px;
 }
 
+.lyric-text, dd {
+	margin-left: 20px;
+}
+
 /* Screen Size Adjustments */
 @media screen and (max-width : 991px) {
 
@@ -209,14 +213,27 @@ body img {
 }
 
 /*
- *
+ * Carousel extended
  */
 .carousel-inner {
-    img {
+    .item img {
+        top: auto;
+        overflow: auto;
         float: none;
-        clear: both;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
     }
+    active .item {
+        left: auto;
+        right: auto;
+    }
+}
+
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
 }

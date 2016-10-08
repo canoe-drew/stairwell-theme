@@ -10,7 +10,7 @@
  */
 body {
   padding-top: 55px;
-  background: #eeeeee;
+  background: #eee;
   font-family: "Palatino", "Garamond", "Times Roman", serif;
   font-size: 1.85rem; }
 
@@ -26,6 +26,14 @@ h1 {
 .jumbotron {
   padding: 10px; }
 
+body img {
+  float: right;
+  width: 50%;
+  padding: 10px; }
+
+.lyric-text, dd {
+  margin-left: 20px; }
+
 /* Screen Size Adjustments */
 @media screen and (max-width: 991px) {
   .jumbotron h1 {
@@ -38,12 +46,19 @@ h1 {
     font-size: 40px; }
 
   h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  body img {
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; } }
 /*
- * Header 
+ * Header
  */
 .navbar-inverse {
-  color: #cccccc;
+  color: #ccc;
   background: #2952a3; }
 
 .navbar-inverse .navbar-brand {
@@ -60,7 +75,7 @@ h1 {
   color: yellow; }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #cccccc;
+  color: #ccc;
   font-size: 18px; }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -83,7 +98,7 @@ h1 {
     width: 100%; }
 
   .dropdown-menu a {
-    color: #cccccc !important; } }
+    color: #ccc !important; } }
 /*
  * Footer
  */
@@ -97,7 +112,7 @@ h1 {
 
 .socialicons a {
   display: inline-block;
-  color: #cccccc;
+  color: #ccc;
   font-size: 28px;
   line-height: 36px;
   padding-top: 7px;
@@ -130,3 +145,25 @@ h1 {
 @media screen and (max-width: 767px) {
   .cd-cover-image {
     width: 90%; } }
+/*
+ * Carousel extended
+ */
+.carousel-inner .item img {
+  top: auto;
+  overflow: auto;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: auto;
+  height: auto; }
+.carousel-inner active .item {
+  left: auto;
+  right: auto; }
+
+.hide-bullets {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=stairwell.css.map */
