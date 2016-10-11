@@ -119,6 +119,11 @@ body img {
     color: fff;
 }
 
+.navbar-brand img {
+    float: left;
+    width: auto;
+    max-height: 50px;
+}
 
 /* Header Screen Size Adjustments */
 @media screen and (max-width : 991px) {

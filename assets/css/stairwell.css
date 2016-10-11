@@ -82,6 +82,11 @@ body img {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: fff; }
 
+.navbar-brand img {
+  float: left;
+  width: auto;
+  max-height: 50px; }
+
 /* Header Screen Size Adjustments */
 @media screen and (max-width: 991px) {
   .navbar-inverse .navbar-brand {
