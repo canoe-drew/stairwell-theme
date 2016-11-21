@@ -59,9 +59,9 @@
                     <span class="icon-bar"></span>
                     </button>
                     {% if meta.language == 'fr' %}
-                    <a class="navbar-brand" href="{{ base_url }}/?accueil">{{site_title}}</a>
+                    <a class="navbar-brand" href="{{ base_url }}/?accueil"><img src="{{theme_url}}/assets/Logo-white.png">{{site_title}}</a>
                     {% else %}
-                    <a class="navbar-brand" href="{{ base_url }}">{{site_title}}</a>
+                    <a class="navbar-brand" href="{{ base_url }}"><img src="{{theme_url}}/assets/Logo-white.png">{{site_title}}</a>
                     {% endif %}
                 </div>
                 <div class="collapse navbar-collapse pull-right">
@@ -85,7 +85,7 @@
                                 {% endif %}
                             </li>
                             {% endfor %}
-                        
+
                         {% for page in page_languages %}
                         {% if page.language != meta.language %}
                         <li><a href="{{ page.url }}">
@@ -120,7 +120,7 @@
                             {% if meta.language == 'fr' %}
                             <a href="{{ base_url }}/colophon-fr" >&copy; Les Chanteurs Stairwell {{ "now"|date("Y") }}</a>
                             {% else %}
-                            <a href="{{ base_url }}/colophon" >&copy; Stairwell Carollers {{ "now"|date("Y") }}</a>
+                            <a href="{{ base_url }}/colophon" >&copy; The Stairwell Carollers {{ "now"|date("Y") }}</a>
                             {% endif %}
                             </li>
                         </ul>

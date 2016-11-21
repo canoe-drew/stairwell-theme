@@ -4,7 +4,7 @@
  * Colours
  */
 
-$menu_brand: #fa0 * 1.2; 
+$menu_brand: #fa0 * 1.2;
 $menu_foreground: #ccc;
 $menu_background: #2952a3;
 $background: #eee;
@@ -42,6 +42,16 @@ h1 {
     padding: 10px;
 }
 
+body img {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.lyric-text, dd {
+	margin-left: 20px;
+}
+
 /* Screen Size Adjustments */
 @media screen and (max-width : 991px) {
 
@@ -55,7 +65,7 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-    
+
     .jumbotron h1 {
         font-size: 40px;
     }
@@ -64,11 +74,19 @@ h1 {
         font-size: 30px;
     }
 
+    body img {
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
 }
 
 
 /*
- * Header 
+ * Header
  */
 
 .navbar-inverse {
@@ -98,9 +116,16 @@ h1 {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: fff; 
+    color: fff;
 }
 
+.navbar-brand img {
+    float: left;
+    width: auto;
+    max-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 /* Header Screen Size Adjustments */
 @media screen and (max-width : 991px) {
@@ -119,7 +144,7 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-    
+
     .navbar-collapse {
         width: 100%;
     }
@@ -174,6 +199,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    float: none;
 }
 
 @media screen and (max-width : 1199px) {
@@ -194,4 +220,28 @@ h1 {
     }
 }
 
+/*
+ * Carousel extended
+ */
+.carousel-inner {
+    .item img {
+        top: auto;
+        overflow: auto;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    active .item {
+        left: auto;
+        right: auto;
+    }
+}
 
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
+}
