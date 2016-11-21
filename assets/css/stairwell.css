@@ -85,7 +85,9 @@ body img {
 .navbar-brand img {
   float: left;
   width: auto;
-  max-height: 50px; }
+  max-height: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px; }
 
 /* Header Screen Size Adjustments */
 @media screen and (max-width: 991px) {
